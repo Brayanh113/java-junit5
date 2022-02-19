@@ -22,36 +22,42 @@ class Session2a_WordCounterTest {
     void shouldCountNumberOfWords() {
         WordCounter counter = new WordCounter("Keep the bar green to keep the code clean.");
         // TODO Check that 9, counter.numberOfWords().
+        assertEquals(9, counter.numberOfWords());
     }
 
     @Test
     void shouldVerifyContainmentOfWord() {
         WordCounter counter = new WordCounter("green bar green hat");
         // TODO Check that counter.containsWord("bar").
+        assertEquals(true,counter.containsWord("bar"));
     }
 
     @Test
     void shouldVerifyNonContainmentOfWord() {
         WordCounter counter = new WordCounter("green hat");
         // TODO Check that counter.containsWord("red") is false.
+        assertEquals(false,counter.containsWord("red"));
     }
 
     @Test
     void shouldReturnNullForUnknownWordCount() {
         WordCounter counter = new WordCounter("green bar green hat");
         // TODO Check that counter.countOf("else") is null.
+        assertEquals(null,counter.countOf("else"));
     }
 
     @Test
     void shouldReturnNotNullWordCountForExistingWord() {
         WordCounter counter = new WordCounter("green bar green hat");
         // TODO Check that counter.countOf("green") is not null.
+        assertEquals(2,counter.countOf("green"));
     }
 
     @Test
     void shouldFindUniqueWords() {
         WordCounter counter = new WordCounter("green bar green hat");
         // TODO Check that new String[] { "bar", "green", "hat" }, counter.uniqueWords().
+
     }
 
     @Test
