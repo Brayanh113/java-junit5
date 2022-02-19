@@ -65,5 +65,6 @@ class Session2a_WordCounterTest {
         WordCounter counter = new WordCounter("green bar green");
         // TODO Check that 0.33, counter.ratioOf("bar").
         // Note that floating point numbers need an accuracy delta, e.g. 0.01.
+        assertEquals(0.3333333333333333,counter.ratioOf("bar"));
     }
 }
